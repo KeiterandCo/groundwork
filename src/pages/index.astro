@@ -1,0 +1,92 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Groundwork | Stop learning the same lessons twice">
+  <main>
+    <section style="position:relative; overflow:hidden; padding:6rem 0 5rem; border-bottom:1px solid var(--color-border);">
+      <div class="noise-grid"></div>
+      <div class="container" style="position:relative; z-index:1;">
+        <p class="label">Groundwork</p>
+        <h1 style="font-family:var(--font-display); font-size:clamp(2rem, 6vw, 3.8rem); max-width:12ch; margin:0.4rem 0;">
+          Stop learning the same lessons twice.
+        </h1>
+        <p style="max-width:58ch; color:var(--color-text-muted);">
+          Groundwork logs your build sessions and surfaces the patterns you keep missing.
+        </p>
+        <div style="display:flex; gap:0.8rem; margin-top:1.2rem; flex-wrap:wrap;">
+          <a class="btn btn-accent" href="/signup">Start logging</a>
+          <a class="btn btn-ghost" href="#how-it-works">See how it works</a>
+        </div>
+      </div>
+      <svg viewBox="0 0 1000 400" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; opacity:0.85;">
+        <line x1="0" y1="350" x2="1000" y2="40" stroke="var(--color-accent)" stroke-width="2" />
+      </svg>
+    </section>
+
+    <section id="how-it-works" class="container" style="padding:3rem 0;">
+      <p class="label">How it works</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:0.8rem;">
+        <article class="card" style="padding:1rem;">
+          <p class="label">Step 1</p>
+          <h2 style="font-family:var(--font-display);">Log a session</h2>
+          <svg width="38" height="38" viewBox="0 0 24 24" aria-hidden="true"><path fill="var(--color-accent)" d="M3 17.25V21h3.75L17.8 9.94l-3.75-3.75L3 17.25zM20.7 7.04a1 1 0 000-1.41L18.37 3.3a1 1 0 00-1.41 0l-1.82 1.82 3.75 3.75L20.7 7.04z"/></svg>
+          <p style="color:var(--color-text-muted);">Capture the blocker while details are still fresh.</p>
+        </article>
+        <article class="card" style="padding:1rem;">
+          <p class="label">Step 2</p>
+          <h2 style="font-family:var(--font-display);">Build up signal</h2>
+          <svg width="38" height="38" viewBox="0 0 24 24" aria-hidden="true"><path fill="var(--color-accent)" d="M4 18h16v2H4zM4 12h12v2H4zM4 6h8v2H4z"/></svg>
+          <p style="color:var(--color-text-muted);">Consistent entries turn one-off friction into usable data.</p>
+        </article>
+        <article class="card" style="padding:1rem;">
+          <p class="label">Step 3</p>
+          <h2 style="font-family:var(--font-display);">See the patterns</h2>
+          <svg width="38" height="38" viewBox="0 0 24 24" aria-hidden="true"><path fill="var(--color-accent)" d="M3 17l5-5 4 4 7-8 2 2-9 10-4-4-3 3z"/></svg>
+          <p style="color:var(--color-text-muted);">Spot what keeps slowing you down before it repeats again.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" style="padding:0.5rem 0 3rem;">
+      <p class="label">What you track</p>
+      <article class="card" style="padding:1rem; margin-top:0.8rem;">
+        <div style="display:grid; gap:0.5rem;">
+          <div><span class="label">Project</span><p>Keiterandco.com redesign</p></div>
+          <div><span class="label">Blocker tags</span><p><span class="btn btn-ghost" style="padding:0.2rem 0.5rem;">Spec gap</span> <span class="btn btn-ghost" style="padding:0.2rem 0.5rem;">Tool access</span></p></div>
+          <div><span class="label">Model used</span><p>Claude Sonnet</p></div>
+          <div><span class="label">Outcome</span><p style="color:var(--color-success);">Resolved</p></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="container" style="padding:0 0 3rem;">
+      <article class="card" style="padding:1rem;">
+        <p class="label">The analysis layer</p>
+        <h2 style="font-family:var(--font-display); margin-top:0.3rem;">See what's actually slowing you down.</h2>
+        <svg viewBox="0 0 500 200" role="img" aria-label="Recurring blockers sample chart" style="width:100%; max-width:560px;">
+          <line x1="40" y1="20" x2="40" y2="170" stroke="var(--color-text-muted)" />
+          <line x1="40" y1="170" x2="470" y2="170" stroke="var(--color-text-muted)" />
+          <rect x="80" y="95" width="50" height="75" fill="var(--color-accent)" />
+          <rect x="170" y="70" width="50" height="100" fill="var(--color-accent)" />
+          <rect x="260" y="110" width="50" height="60" fill="var(--color-accent)" />
+          <rect x="350" y="50" width="50" height="120" fill="var(--color-accent)" />
+          <text x="80" y="188" fill="var(--color-text-muted)" font-size="10" font-family="var(--font-mono)">Spec</text>
+          <text x="170" y="188" fill="var(--color-text-muted)" font-size="10" font-family="var(--font-mono)">Tool</text>
+          <text x="260" y="188" fill="var(--color-text-muted)" font-size="10" font-family="var(--font-mono)">Scope</text>
+          <text x="350" y="188" fill="var(--color-text-muted)" font-size="10" font-family="var(--font-mono)">Prompt</text>
+        </svg>
+        <p style="color:var(--color-text-muted); max-width:65ch;">
+          Groundwork turns your entries into an analysis view so recurring blockers, project risk, and repeated friction points become visible early.
+        </p>
+      </article>
+    </section>
+
+    <section style="border-top:1px solid var(--color-border); padding:3.5rem 0;">
+      <div class="container" style="text-align:center;">
+        <h2 style="font-family:var(--font-display);">Ready to see your patterns?</h2>
+        <a class="btn btn-accent" href="/signup" style="margin-top:0.8rem;">Sign up</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

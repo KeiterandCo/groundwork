@@ -1,0 +1,31 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+
+interface Props {
+  title?: string;
+}
+
+const { title = "Groundwork App" } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <Nav />
+  <main class="container" style="padding:1.2rem 0 2rem;">
+    <slot />
+  </main>
+</BaseLayout>
+
+<script type="module">
+  import { supabase } from "../lib/supabase";
+
+  const setCookieFromSession = async () => {
+    const { data } = await supabase.auth.getSession();
+    const token = data.session?.access_token;
+    if (token) {
+      document.cookie = `sb-access-token=${token}; Path=/; Max-Age=604800; SameSite=Lax`;
+    }
+  };
+
+  setCookieFromSession();
+</script>
