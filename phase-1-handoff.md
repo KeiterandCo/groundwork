@@ -1,7 +1,7 @@
 # Phase 1 Handoff - Groundwork
 
 ## Summary
-Phase 1 foundation is implemented in code: Astro scaffold, Tailwind styling, Supabase client wiring, auth pages, middleware protection, branded landing and 404 pages, and required stubs for later phases.
+Phase 1 foundation is implemented in code and infrastructure: Astro scaffold, Tailwind styling, Supabase client wiring, auth pages, middleware protection, branded landing and 404 pages, required stubs for later phases, GitHub repo, and Netlify project with CI/CD webhook.
 
 ## Completed deliverables
 - Astro project scaffold with Tailwind and Supabase client
@@ -14,12 +14,15 @@ Phase 1 foundation is implemented in code: Astro scaffold, Tailwind styling, Sup
 - Stub pages with clear phase comments for dashboard/log/analysis/review work
 - Branded 404 page with builder-tone copy
 - `CLAUDE.md` added at repo root
+- Git initialized and initial commit pushed to `main`
+- GitHub repo created at `https://github.com/KeiterandCo/groundwork`
+- Netlify project created and linked to local repo
+- Netlify CI/CD configured for branch and PR deploys
+- Netlify live URL: `https://groundwork-20260512204234.netlify.app`
 
-## Remaining external setup steps
-- Run Supabase SQL migration in project SQL editor (see `groundwork-kickoff.md`)
+## Remaining prerequisite
+- Run Supabase SQL migration in the Supabase SQL editor (statements in `groundwork-kickoff.md`)
 - Set real values in `.env.local` for `PUBLIC_SUPABASE_URL` and `PUBLIC_SUPABASE_ANON_KEY`
-- Initialize git remote in `KeiterandCo/groundwork` and push `main`
-- Create Netlify site, connect GitHub repo, and enable auto deploy
 
 ## Local preview
 - `http://localhost:4321`
